@@ -2,6 +2,7 @@ package StructSignature
 
 import "testing"
 import "reflect"
+import "fmt"
 
 type TestStruct struct {
 	i  int
@@ -47,4 +48,10 @@ func TestComplicateSignature(t *testing.T) {
 		t.Errorf("Wrong signature %s", ret)
 	}
 	t.Logf("%s", ret)
+}
+
+func ExampleGetSignature() {
+
+	fmt.Printf("%s", GetSignature(EmbbedStruct{}))
+	// Output: 9c2943a7d6d4f8d64128698493d4e99a
 }
