@@ -6,6 +6,7 @@ import (
 	"reflect"
 )
 
+//GetSignature accept any input and will generate a md5 signature in string for the stuct
 func GetSignature(i interface{}) string {
 	refleType := reflect.TypeOf(i)
 	searchResult := searchInterface(refleType)
